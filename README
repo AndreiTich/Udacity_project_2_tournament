@@ -1,0 +1,38 @@
+Welcome to the tournament python program. This is a submission for the second assignment
+of the Udacity Full Stack Development NanoDegree.
+
+In order to sucessfully run the application, make sure that the
+following steps are followed.
+
+1: Check that the following python packages are present in your python installation
+	psycopg2
+	itertools
+	pprint
+	operator
+
+2. To set up the Postgres database for this program, you will have to run tournament.sql
+   Before running it, please modify the line after the MODIFY line to make sure it connects
+   to a databse which exists on the system but it not the tournament database. This is to
+   ensure that if there it a tournament database it can be sucessfully re-instantiated by
+   the SQL file.
+
+   Once that is done, make sure are in the tournament project directory when you sign into
+   PSQL. When you are inside you can issue the following command to create the database:
+
+   	'\i tournament.sql'
+
+   Without the quotation marks
+
+3. Now that your database has been instantiated. You can run the tournament_test.py file.
+   This will test the functionality of the tournament.py module.
+
+ADDITIONAL INFORMATION
+
+This module supports all of extra credit features including multiple tournaments, rematch
+prevention, and odd and even number of players support. The multiple tournament support
+works by having a table to relate player IDs and tournament IDs. So if a player wants to
+register in two tournaments seperately, it is like registering twice as each player ID can
+only be associated with one tournament ID. If I were to improve how this works I would allow
+for one player ID to be part of multiple tournaments. I did not implement this however because
+of the way that I count the player standings in Postgres (and the query would have gotten really
+muddled up!).
